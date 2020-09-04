@@ -2,33 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Lake(){
+function Lake({name}){
   return (
     <div>
-      <h1>Visit Jenney Lake!</h1>
+      <h1>Visit {name}!</h1>
     </div>
   );
 }
 
-function SkiResort() {
+function SkiResort({name}) {
   return (
     <div>
-      <h1>Visit Jackson Hole Mountain Resort</h1>
+      <h1>Visit {name} </h1>
     </div>
   );
 }
 
 function App(props){
   if(props.season === "summer"){
-    return <Lake/>
+    return <Lake name="Jenney Lake"/>
   }else if(props.season === "winter"){
-    return <SkiResort/>
+    return <SkiResort name = "Jackson Hole Mountain Resort"/>
   }
 }
 
 
 ReactDOM.render(
-    <App season="summer"/>,
+    <App season="winter"/>,
     document.getElementById('root')
   );
 
