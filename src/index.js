@@ -1,31 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-function Lake(){
-  return (
-      <h1>Lake!</h1>
-  );
-}
+ReactDOM.render(<App />, document.getElementById('root'));
 
-function SkiResort(){
-  return (
-      <h1>Ski Resort!</h1>
-  );
-}
-
-function App(props){
-  return(
-    <React.Fragment>
-      <Lake/>
-      <SkiResort/>
-    </React.Fragment>
-   
-  );
-  
-}
-ReactDOM.render(
-    <App season="fall"/>,
-    document.getElementById('root')
-  );
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
 
